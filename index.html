@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- assignment 1 graph -->
+    <h1 class="text-center mt-4">Assignment First</h1>
+    <div id="chart"></div>
+
+
+    <!-- assignment 2 modal -->
+    <h1 class="text-center mt-4 mb-4">Assignment Second</h1>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-6 d-flex justify-content-around">
+                    <div class="profile d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="profile-text">
+                      <h3>Ethan Wong</h3>
+                      <p>Male 60yrs(senior citizen)</p>
+                    </div>
+                    </div>
+                    <div class="col-4 profile-text text-end d-flex justify-content-end flex-column align-items-end">
+                        <h3>Resident</h3>
+                        <p class="p-1 bg-light malaysia w-50">Malaysia</p>
+                    </div>
+                </div>
+
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+              <div class="row d-flex justify-content-around">
+                <div class="col-sm-3 p-0 bg-light card-modal mt-2">
+                    <div class="card-heading d-flex justify-content-between align-items-center">
+                        <p class="mb-0 mx-1">Patient Id</p>
+                        <i class="fa-solid fa-id-badge me-1"></i>
+                    </div>
+                    <div class="data bg-clr ">
+                        <p class="mb-0 mx-2">5321344</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 p-0 bg-light card-modal mt-2">
+                    <div class="card-heading d-flex justify-content-between align-items-center">
+                        <p class="mb-0 mx-1">Visit Id</p>
+                        <i class="fa-solid fa-id-card me-1"></i>
+                    </div>
+                    <div class="data bg-clr ">
+                        <p class="mb-0 mx-2">2735678</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 p-0 bg-light card-modal mt-2">
+                    <div class="card-heading d-flex justify-content-between align-items-center">
+                        <p class="mb-0 mx-1">Ward</p>
+                        <i class="fa-sharp fa-solid fa-hospital me-1"></i>
+                    </div>
+                    <div class="data bg-clr ">
+                        <p class="mb-0 mx-2">Ward 2A</p>
+                    </div>
+                </div>
+              </div>
+              <div class="row d-flex justify-content-around">
+                <div class="col-sm-5 p-0 bg-light card-modal mt-2">
+                    <div class="card-heading d-flex justify-content-between align-items-center">
+                        <p class="mb-0 mx-1">Bed (F5-102)</p>
+                        <i class="fa-solid fa-id-badge me-1"></i>
+                    </div>
+                    <div class="data bg-clr ">
+                        <p class="mb-0 mx-2">Single Bed</p>
+                    </div>
+                </div>
+                <div class="col-sm-5 p-0 bg-light card-modal mt-2">
+                    <div class="card-heading d-flex justify-content-between align-items-center">
+                        <p class="mb-0 mx-1">Payor</p>
+                        <i class="fa-solid fa-id-badge me-1"></i>
+                    </div>
+                    <div class="data bg-clr ">
+                        <p class="mb-0 mx-2">AIA BHD (INDIVIDUAL)</p>
+                    </div>
+                </div>
+              </div>
+              <div class="row d-flex journey-heading justify-content-between align-items-center mt-4">
+                <div class="col-6 text-nowrap">
+                    <h2>Admission Journey</h2>
+                </div>
+                <div class="col-4">
+                   <p class="mb-0">Elapsed <span>02:40</span> </p> 
+                </div>
+              </div>
+              <div class="page-content page-container" id="page-content">           
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="timeline block mb-4">
+                                <div class="tl-item active">
+                                    <div class="d-flex align-items-end justify-content-start timestamp">
+                                       <p class="mb-0 mt-5">00:24</p> 
+                                    </div>
+                                    <div class="tl-dot">
+                                        <div class="p-3 icon-box overflow-hidden">
+                                            <i class="fa-solid fa-check"></i>   
+                                        </div>
+                                    </div>
+                                    <div class="tl-content">
+                                        <div class="row-journey-data">
+                                            <p class="mb-0 ">Admission Request<span class="mx-2 text-nowrap">Dec 06 2021 08:36 AM</span></p>
+                                            <div class="d-flex"> 
+                                                <p class="mb-0"> <i class="fa-solid fa-user"></i> Ratha AP</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tl-item">
+                                    <div class="d-flex align-items-end justify-content-start timestamp">
+                                        <p class="mb-0 mt-5">02:23</p> 
+                                     </div>
+                                    <div class="tl-dot">
+                                        <div class="p-3 icon-box overflow-hidden">
+                                            <i class="fa-solid fa-check"></i>   
+                                        </div> 
+                                    </div>
+                                    <div class="tl-content">
+                                        <div class="row-journey-data">
+                                            <p class="mb-0 ">Sent for IGL Approval<span class="mx-2 text-nowrap">Dec 06 2021 09:00 AM</span></p>
+                                            <div class="d-flex"> 
+                                                <p class="mb-0"> <i class="fa-solid fa-user"></i> Jim Chin</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tl-item">
+                                    <div class="d-flex align-items-end justify-content-start timestamp">
+                                        <p class="mb-0 mt-5">00:15</p> 
+                                     </div>
+                                    <div class="tl-dot">
+                                        <div class="p-3 icon-box overflow-hidden">
+                                            <i class="fa-solid fa-check"></i>   
+                                        </div>   
+                                    </div>
+                                    <div class="tl-content">
+                                        <div class="row-journey-data">
+                                            <p class="mb-0 ">Received IGL Approval<span class="mx-2 text-nowrap">Dec 06 2021 11:23 AM</span></p>
+                                            <div class="d-flex"> 
+                                                <p class="mb-0"> <i class="fa-solid fa-user"></i> Jim Chin</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tl-item">
+                                    <div class="d-flex align-items-end justify-content-start timestamp">
+                                        <p class="mb-0 mt-5">00:15</p> 
+                                     </div>
+                                    <div class="tl-dot">
+                                        <div class="p-3 icon-box overflow-hidden">
+                                            <i class="fa-solid fa-check"></i>   
+                                        </div>   
+                                    </div>
+                                    <div class="tl-content">
+                                        <div class="row-journey-data">
+                                            <p class="mb-0 ">Requested Bed Confirmation<span class="mx-2 text-nowrap">Dec 06 2021 11:23 AM</span></p>
+                                            <div class="d-flex"> 
+                                                <p class="mb-0"> <i class="fa-solid fa-user"></i> Jim Chin</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tl-item">
+                                    <div class="d-flex align-items-end justify-content-start timestamp">
+                                        <p class="mb-0 mt-5 opacity-0">a</p> 
+                                     </div>
+                                    <div class="tl-dot">
+                                        <div class="p-3 last-icon-box overflow-hidden">
+                                            <i class="fa-sharp fa-solid fa-stethoscope"></i>   
+                                        </div>
+                                    </div>
+                                    <div class="tl-content">
+                                        <div class="row-journey-data">
+                                            <p class="mb-0 text-nowrap">Admitted</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tl-item">
+                                    <div class="d-flex align-items-end justify-content-start timestamp">
+                                        <p class="mb-0 mt-5 opacity-0">a</p> 
+                                     </div>
+                                    <div class="tl-dot">
+                                        <div class="p-3 last-icon-box  overflow-hidden">
+                                            <i class="fa-solid fa-bed"></i>  
+                                        </div>
+                                    </div>
+                                    <div class="tl-content">
+                                        <div class="row-journey-data">
+                                            <p class="mb-0 text-nowrap">Accepted</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+     
+    <div class="container d-flex justify-content-center p-5">
+        <a class="btn bg-warning bg-opacity-50 d-flex align-items-center justify-content-between p-2" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+            <i class="fa-solid fa-user me-3"></i>
+            <h5 class="mb-0 ">Ethan Wong</h5>
+        </a>
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script>
+        var graphdata = {
+          value1: {
+              interval: "Discharge By Interval",
+              time: "Avg Time",
+              //  x:  [10,20,30,40],
+              //  y:  [50,60,70,80],
+               z:  [0, 1, 96, 15, 5, 2, 0, 0, 0,0],         
+               y:[
+              "12PM-06PM",
+              "06PM-08PM",
+              "08PM-10PM",
+              "10PM-12PM",
+              "12PM-02PM",
+              "02PM-04PM",
+              "04PM-06PM",
+              "06PM-08PM",
+              "08PM-10PM",
+              "08PM-10PM",
+  
+            ],     
+          },
+         
+        };
+        var options = {
+          chart: {},
+          colors: ["#ffc4c0", "#102f72", "#9C27B0"],
+          series: [
+            {
+              type: "bar",
+              name: graphdata.value1.interval,
+              data: [
+                graphdata.value1.z[0],
+                graphdata.value1.z[1],
+                graphdata.value1.z[2],
+                graphdata.value1.z[3],
+                graphdata.value1.z[4],
+                graphdata.value1.z[5],
+                graphdata.value1.z[6],
+                graphdata.value1.z[7],
+                graphdata.value1.z[8],
+                graphdata.value1.z[9]            
+              ],
+              // data: [
+              //   { x: graphdata.value1.x[0], y: graphdata.value1.y[0] },
+              //   { x: graphdata.value1.x[1], y: graphdata.value1.y[1] },
+              //   { x: graphdata.value1.x[2], y: graphdata.value1.y[2] },
+              //   { x: graphdata.value1.x[3], y: graphdata.value1.y[3] },
+              // ],
+            },
+            {
+              type: "line",
+              name: graphdata.value1.time,
+              data: [
+                graphdata.value1.z[0],
+                graphdata.value1.z[1],
+                graphdata.value1.z[2],
+                graphdata.value1.z[3],
+                graphdata.value1.z[4],
+                graphdata.value1.z[5],
+                graphdata.value1.z[6],
+                graphdata.value1.z[7],
+                graphdata.value1.z[8],
+                graphdata.value1.z[9]
+              ],
+              // data: [30, 40, 45, 50, 49, 60, 70, 91, 125],
+            },
+          ],
+          xaxis: {
+            categories: [
+              graphdata.value1.y[0],
+              graphdata.value1.y[1],
+              graphdata.value1.y[2],
+              graphdata.value1.y[3],
+              graphdata.value1.y[4],
+              graphdata.value1.y[5],
+              graphdata.value1.y[6],
+              graphdata.value1.y[7],
+              graphdata.value1.y[8],
+              graphdata.value1.y[9],
+            ],
+          },
+          stroke: {
+            curve: "smooth",
+          },
+        };
+  
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+  
+        chart.render();
+        console.log(graphdata.value1.data1.x)
+      </script>
+    
+    <!-- JavaScript Bundle with Popper -->
+</body>
+</html>
